@@ -7,6 +7,8 @@ class ArticlesController < ApplicationController
   respond_to :json
 
   def index
+    # sleep(2)
+
     @articles = Article.all
     respond_with(@articles)
   end
