@@ -32,11 +32,12 @@ group :development do
 end
 
 group :test do
-  gem 'faker'
   gem 'chronic'
 end
 
 group :development, :test do
+  gem 'faker'
+
   gem 'rspec-rails'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
