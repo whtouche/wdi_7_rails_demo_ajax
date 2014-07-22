@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   def default_serializer_options
-    {root: false}
+    {root: false} # Eliminate "Articles" header from json output
   end
 
   respond_to :json
@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
     if @article.save
       respond_with(@article)
     else
-      respond_with(@article.errors)      
+      respond_with(@article.errors)
     end
   end
 
@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
     if @article.update(params[:article])
       head :no_content
     else
-      respond_with(@article.errors)      
+      respond_with(@article.errors)
     end
   end
 
