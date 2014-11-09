@@ -28,6 +28,7 @@ $(document).ready(function(){
 
     $('#articles').append(articlesHTML);
   },
+
   articleHTML = function(article){
     var html = '<li id=article_' + article.id + '>';
     html += article.title;
@@ -41,7 +42,7 @@ $(document).ready(function(){
   },
   createArticleCallbackHandler = function(event){
     // New article form
-    var $form = $(event.target),
+    var $form = $(event.currentTarget),
     $title = $form.find("input[name='title']"),
     $body = $form.find("input[name='body']"),
     // Get the form action
